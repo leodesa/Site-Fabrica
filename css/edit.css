@@ -14,6 +14,7 @@ html{
 }
 .blue-text.text-lighten-2{
   color: #00A3C8 !important;
+  text-shadow: 0.03em 0.03em 0.05em #eee;
 }
 a i.material-icons{
 	color: #00A3C8 !important;	
@@ -23,5 +24,25 @@ a i.material-icons{
 }
 .header.col.s12.light{
 	color: #000 !important;
-	text-shadow: 0.1em 0.1em 0.05em #fff;
+	text-shadow: 0.05em 0.05em 0.03em #fff;
+}
+#icon{
+	background-color: #000;
+	width: 100px;
+}
+@media only screen and (max-width: 634px) {
+  #logo-container{
+    font-size:0%;
+  }
+  #logo{
+  	margin-top: 10px;
+  	width: 40px;
+  	height: 40px;
+  }
+}
+
+.redes{
+	margin-right: 5px;
+	width: 14px;
+	height: 14px;
 }
