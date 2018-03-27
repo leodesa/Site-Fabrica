@@ -22,6 +22,6 @@ a i.material-icons{
 	background-color: #00A3C8 !important;
 }
 .header.col.s12.light{
-	color: #000 !important;	
-	background-color: #fff;
+	color: #000 !important;
+	text-shadow: 0.1em 0.1em 0.05em #fff;
 }
