@@ -72,3 +72,7 @@ a i.material-icons{
 .nome{
 	font-size: 200%;
 }
+#easter-egg{
+	text-decoration: none;
+	color: #00A3C8;
+}
