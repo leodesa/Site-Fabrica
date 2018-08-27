@@ -17,20 +17,22 @@
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
     	<img id="logo" src="img/logo.png">
-      <a id="logo-container" href="index.html" class="brand-logo">Fábrica de Software
+      <a id="logo-container" href="index.php" class="brand-logo">Fábrica de Software
       </a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="index.html">Principal</a></li>
-        <li><a href="softwares.html">Softwares</a></li>
+        <li><a href="index.php">Principal</a></li>
+        <li><a href="softwares.php">Softwares</a></li>
         <li><a href="#">Contato</a></li>
-        <li><a href="envolvidos.html">Envolvidos</a></li>
+        <li><a href="envolvidos.php">Envolvidos</a></li>
+        <li><a href="login.php">Login</a></li>
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
-        <li><a href="index.html">Principal</a></li>
-        <li><a href="softwares.html">Softwares</a></li>
+        <li><a href="index.php">Principal</a></li>
+        <li><a href="softwares.php">Softwares</a></li>
         <li><a href="#">Contato</a></li>
-        <li><a href="envolvidos.html">Envolvidos</a></li>
+        <li><a href="envolvidos.php">Envolvidos</a></li>
+        <li><a href="login.php">Login</a></li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>

@@ -17,59 +17,52 @@
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
     	<img id="logo" src="img/logo.png">
-      <a id="logo-container" href="index.html" class="brand-logo">Fábrica de Software
+      <a id="logo-container" href="index.php" class="brand-logo">Fábrica de Software
       </a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="index.html">Principal</a></li>
-        <li><a href="softwares.html">Softwares</a></li>
+        <li><a href="index.php">Principal</a></li>
+        <li><a href="softwares.php">Softwares</a></li>
         <li><a href="#">Contato</a></li>
-        <li><a href="envolvidos.html">Envolvidos</a></li>
+        <li><a href="envolvidos.php">Envolvidos</a></li>
+        <li><a href="login.php">Login</a></li>
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
-        <li><a href="index.html">Principal</a></li>
-        <li><a href="softwares.html">Softwares</a></li>
+        <li><a href="index.php">Principal</a></li>
+        <li><a href="softwares.php">Softwares</a></li>
         <li><a href="#">Contato</a></li>
-        <li><a href="envolvidos.html">Envolvidos</a></li>
+        <li><a href="envolvidos.php">Envolvidos</a></li>
+        <li><a href="login.php">Login</a></li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
   </nav>
-  
-  <div class="carousel carousel-slider center">
-    <div class="carousel-fixed-item center">
-      <a class="btn waves-effect white grey-text darken-text-2">button</a>
-    </div>
-    <div class="carousel-item white-text" href="#one!">
-      <img src="img/telaPsique.png">
-      <h1>Psique</h1>
-      <p class="white-text">This is your first panel</p>
-    </div>
-    <div class="carousel-item amber white-text" href="#two!">
-      <h2>Second Panel</h2>
-      <p class="white-text">This is your second panel</p>
-    </div>
-    <div class="carousel-item green white-text" href="#three!">
-      <h2>Third Panel</h2>
-      <p class="white-text">This is your third panel</p>
-    </div>
-    <div class="carousel-item blue white-text" href="#four!">
-      <h2>Fourth Panel</h2>
-      <p class="white-text">This is your fourth panel</p>
-    </div>
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="icon_login" type="text" class="validate">
+          <label for="icon_login">Login</label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">enhanced_encryption</i>
+          <input id="icon_password" type="password" class="validate">
+          <label for="icon_password">Senha</label>
+        </div>
+      </div>
+    </form>
   </div>
-
   <footer class="page-footer teal">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
           <h5 class="white-text">Contato</h5>
-          <p class="grey-text text-lighten-4">Faculdade Vale do Salgado <br> 
-                                              Cidade de Icó, Ceará <br>
-                                              Prof. Adriano Lima Candido <br>
-                                              Cel. (88) 9 9729-2878</p>
-
-
+          <p class="grey-text text-lighten-4">
+            Faculdade Vale do Salgado <br> 
+            Cidade de Icó, Ceará <br>
+            Prof. Adriano Lima Candido <br>
+            Cel. (88) 9 9729-2878</p>
         </div>
         <div class="col l3 s12">
           <h5 class="white-text">Siga também!</h5>

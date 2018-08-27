@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Fábrica de Software</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/edit.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="icon" href="img/logo.png">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+    	<img id="logo" src="img/logo.png">
+      <a id="logo-container" href="index.php" class="brand-logo">Fábrica de Software
+      </a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="index.php">Principal</a></li>
+        <li><a href="softwares.php">Softwares</a></li>
+        <li><a href="#">Contato</a></li>
+        <li><a href="envolvidos.php">Envolvidos</a></li>
+        <li><a href="login.php">Login</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="index.php">Principal</a></li>
+        <li><a href="softwares.php">Softwares</a></li>
+        <li><a href="#">Contato</a></li>
+        <li><a href="envolvidos.php">Envolvidos</a></li>
+        <li><a href="login.php">Login</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  
+  <div class="carousel carousel-slider center">
+    <div class="carousel-fixed-item center">
+      <a class="btn waves-effect white grey-text darken-text-2">button</a>
+    </div>
+    <div class="carousel-item white-text" href="#one!">
+      <img src="img/telaPsique.png">
+      <h1>Psique</h1>
+      <p class="white-text">This is your first panel</p>
+    </div>
+    <div class="carousel-item amber white-text" href="#two!">
+      <h2>Second Panel</h2>
+      <p class="white-text">This is your second panel</p>
+    </div>
+    <div class="carousel-item green white-text" href="#three!">
+      <h2>Third Panel</h2>
+      <p class="white-text">This is your third panel</p>
+    </div>
+    <div class="carousel-item blue white-text" href="#four!">
+      <h2>Fourth Panel</h2>
+      <p class="white-text">This is your fourth panel</p>
+    </div>
+  </div>
+
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Contato</h5>
+          <p class="grey-text text-lighten-4">Faculdade Vale do Salgado <br> 
+                                              Cidade de Icó, Ceará <br>
+                                              Prof. Adriano Lima Candido <br>
+                                              Cel. (88) 9 9729-2878</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Siga também!</h5>
+          <ul>
+            <li><a class="redes white-text" href="https://www.facebook.com"><img class="redes" src="img/facebook.png" href="#">Facebook</a></li>
+            <li><a class="redes white-text" href="https://www.instagram.com"><img class="redes" src="img/instagram.png" href="#">Instagram </a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
