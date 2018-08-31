@@ -14,29 +14,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
-  <nav class="white" role="navigation">
-    <div class="nav-wrapper container">
-    	<img id="logo" src="img/logo.png">
-      <a id="logo-container" href="index.php" class="brand-logo">Fábrica de Software
-      </a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="index.php">Principal</a></li>
-        <li><a href="softwares.php">Softwares</a></li>
-        <li><a href="#">Contato</a></li>
-        <li><a href="envolvidos.php">Envolvidos</a></li>
-        <li><a href="login.php">Login</a></li>
-      </ul>
-
-      <ul id="nav-mobile" class="sidenav">
-        <li><a href="index.php">Principal</a></li>
-        <li><a href="softwares.php">Softwares</a></li>
-        <li><a href="#">Contato</a></li>
-        <li><a href="envolvidos.php">Envolvidos</a></li>
-        <li><a href="login.php">Login</a></li>
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
+  <?php include('include/menu.php'); ?>
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
@@ -61,36 +39,7 @@
   		<img class="foto" src="img/fotos/leonardo.png"><div class="center nome">Leonardo Sá</div></a></li>
   </ul>
 
-
-  <footer class="page-footer teal">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Contato</h5>
-          <p class="grey-text text-lighten-4">Faculdade Vale do Salgado <br> 
-                                              Cidade de Icó, Ceará <br>
-                                              Prof. Adriano Lima Candido <br>
-                                              Cel. (88) 9 9729-2878</p>
-
-          <a id="easter-egg" href="https://www.google.com.br/imgres?imgurl=http%3A%2F%2Fgeradormemes.com%2Fmedia%2Fcreated%2Fzklqma.jpg&imgrefurl=http%3A%2F%2Fgeradormemes.com%2Fmeme%2Fzklqma&docid=qBKfERzpKgQA7M&tbnid=T6cYl_bQo4QDZM%3A&vet=10ahUKEwjVt4XNto_aAhVGh5AKHWQmAzwQMwg6KAAwAA..i&w=600&h=799&bih=677&biw=1303&q=ta%20na%20disney%20meme&ved=0ahUKEwjVt4XNto_aAhVGh5AKHWQmAzwQMwg6KAAwAA&iact=mrc&uact=8" target="_blank">Tá na Disney?</a>
-
-
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Siga também!</h5>
-          <ul>
-            <li><a class="redes white-text" href="https://www.facebook.com"><img class="redes" src="img/facebook.png" href="#">Facebook</a></li>
-            <li><a class="redes white-text" href="https://www.instagram.com"><img class="redes" src="img/instagram.png" href="#">Instagram </a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-      </div>
-    </div>
-  </footer>
+  <?php include('include/rodape.php'); ?>
 
 
   <!--  Scripts-->
