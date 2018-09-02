@@ -41,7 +41,7 @@
       <div class="row">
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
+            <h2 class="center brown-text"><i class="material-icons large">group</i></h2>
             <h5 class="center">GESTÃO DE PESSOAS</h5>
 
             <p class="center light">Revolucionamos as experiências das pessoas transformado processos com plataformas digitais. Utilizando o melhor da tecnologia a favor da sua empresa para atrair, engajar, capacitar e reter seu capital humano. Ganhe eficiência e agilidade nos processos de RH, integrando todas as informações em um único lugar.</p>
@@ -50,7 +50,7 @@
 
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">school</i></h2>
+            <h2 class="center brown-text"><i class="material-icons large">school</i></h2>
             <h5 class="center">EDUCACIONAL</h5>
 
             <p class="center light">Entregue documentos com mais rapidez, gaste menos tempo com processos de rotina e ofereça um atendimento com muito mais qualidade, através das nossos soluções você poderá encontrar inovações e soluções eficientes para sua instituição de ensino.</p>
@@ -59,7 +59,7 @@
 
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">desktop_mac</i></h2>
+            <h2 class="center brown-text"><i class="material-icons large">desktop_mac</i></h2>
             <h5 class="center">PERSONALIZAÇÃO</h5>
 
             <p class="center light">Oferecemos programas de computadores de qualidade e personalizados de acordo com a necessidade da sua empresa. O nosso objetivo principal é facilitar a vida dos nossos clientes no que diz respeito a organização e manutenção de todo e qualquer serviço.</p>
