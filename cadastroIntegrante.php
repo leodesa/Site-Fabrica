@@ -20,21 +20,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
-  <nav class="blue" role="navigation">
-    <div class="nav-wrapper container">
-      <a href="index.php"><img id="logo" src="img/logo.png" width="75"></a>
-      <a href="index.php" class="brand-logo">Fábrica de Software
-      </a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="logout.php">Sair</a></li>
-      </ul>
-
-      <ul id="nav-mobile" class="sidenav">
-        <li><a href="logout.php">Sair</a></li>
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
+  <?php include('include/menu2.php');?>
   <br>
   <br>
   <br>
@@ -42,7 +28,7 @@
       <h4 class="blue-text center-align">Cadastro de integrantes</h4>
         <div class="row">
         <div class="input-field col l4 m6 s12 push-l2">
-          <i class="material-icons prefix">person</i>
+          <i class="material-icons prefix fas fa-user fa-lg"></i>
           <input id="nome" name="nome" type="text" class="validate">
           <label for="nome">Nome</label>
         </div>
@@ -93,7 +79,7 @@
 
 
   <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/script.js"></script>
 

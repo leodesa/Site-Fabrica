@@ -22,7 +22,7 @@
     <form class="container" method="post" action="DAO.php">
         <div class="row">
         <div class="input-field col l6 m8 s12 push-l3 push-m2">
-          <i class="material-icons prefix">person_outline</i>
+          <i class="material-icons prefix far fa-user fa-lg"></i>
           <input id="usuario" name="usuario" type="text" class="validate">
           <label for="usuario">Login</label>
         </div>
@@ -53,9 +53,9 @@
 
 
   <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
+  <script src="js/script.js"></script>
 
   </body>
 </html>
