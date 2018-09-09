@@ -19,7 +19,7 @@
 		$sql1 = "INSERT INTO tipoPeca VALUES(null, '$tipoPeca')";
 		$mysqli->query($sql1);
 	}
-	if(isset($_POST['AtuTipoPeca'])){
+	if(isset($_POST['idAt'])){
 		include('conexao.php');
 		$tipoPeca = $_POST['AtuTipoPeca'];
 		$id = $_POST['AtuId'];
@@ -29,7 +29,18 @@
 	if(isset($_POST['idEx'])){
 		include('conexao.php');
 		$idEx = $_POST['idEx'];
-		$sql1 = "DELETE FROM tipopeca WHERE tipopeca.id = '$idEx'";
-		$mysqli->query($sql1);
+		$pastaDel = 'fotos';
+
+		$sql = "SELECT membros.foto FROM membros WHERE membros.id = '$idEx'";
+		$query = $mysqli->query($sql);
+		$row = $query->num_rows;
+		if($row>0){
+			while($ress = mysqli_fetch_array($query)){
+				$fotos = $ress[0];
+			}
+			$sql1 = "DELETE FROM membros WHERE membros.id = '$idEx'";
+			$mysqli->query($sql1);
+			unlink($pastaDel."/".$fotos);
+		}
 	}
 ?>

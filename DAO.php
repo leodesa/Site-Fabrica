@@ -123,28 +123,72 @@
 	}*/
 
 	
-	if(isset($_POST['nome'])){
+	if(isset($_POST['nome']) AND empty($_POST['idIntegrante'])){
 		$nome = $_POST['nome'];
 		$sobrenome = $_POST['sobrenome'];
 		$matricula = $_POST['matricula'];
 		$link = $_POST['link'];
+		$descricao = $_POST['descricao'];
 		include("conexao.php");
 	if(isset($_FILES['foto'])){
       date_default_timezone_set("Brazil/East"); //Definindo timezone padrão
 
 	  $ext = ltrim( substr(  $_FILES['foto']['name'], strrpos(  $_FILES['foto']['name'], '.' ) ), '.' ); //Pegando extensão do arquivo
-      $new_name = md5(date("Y.m.d-H.i.s")) . $ext; //Definindo um novo nome para o arquivo
+      $new_name = md5(date("Y.m.d-H.i.s")) . "." . $ext; //Definindo um novo nome para o arquivo
       $dir = 'fotos/'; //Diretório para uploads
 
-      move_uploaded_file($_FILES['foto']['tmp_name'], $dir.$new_name); //Fazer upload do arquivo
    
-	$caminho = "fotos/".$nome_final;
-	$sql4 = "INSERT INTO membros VALUES(null, '$nome','$sobrenome','$matricula','$link','$caminho','1')";
-	if($mysqli->query($sql4)){
-		echo("<script type='text/javascript'> alert('Upload efetuado com sucesso!'); location.href='cadastro.php';</script>");
+	$sql4 = "INSERT INTO membros VALUES(null, '$nome','$sobrenome','$matricula','$link','$descricao','$new_name','1')";
+	if($mysqli->query($sql4) AND move_uploaded_file($_FILES['foto']['tmp_name'], $dir.$new_name)){
+		echo("<script type='text/javascript'> alert('Salvo com sucesso!'); location.href='cadastroIntegrante.php';</script>");
 	}else{
-		echo("<script type='text/javascript'> alert('Houve um erro! tente novamente'); location.href='cadastro.php';</script>");
+		echo("<script type='text/javascript'> alert('Houve um erro! tente novamente'); location.href='cadastroIntegrante.php';</script>");
 	}
 		}
+	}
+	if(!empty($_POST['idIntegrante'])){
+		$id = $_POST['idIntegrante'];
+		$nome = $_POST['nome'];
+		$sobrenome = $_POST['sobrenome'];
+		$matricula = $_POST['matricula'];
+		$link = $_POST['link'];
+		$descricao = $_POST['descricao'];
+		$nomeFoto = $_POST['nomeFoto'];
+		include("conexao.php");
+		$sql = "SELECT membros.foto FROM membros WHERE membros.foto = '$nomeFoto'";
+		$query = $mysqli->query($sql);
+		$sql2 = "SELECT membros.foto FROM membros WHERE membros.id = '$id'";
+		$query2 = $mysqli->query($sql2);
+		$row = $query->num_rows;
+		if($row<1){
+			while($ress = mysqli_fetch_array($query2)){
+				$fotos = $ress[0];
+			}
+			$pastaDel = 'fotos';
+			unlink($pastaDel."/".$fotos);
+			if(isset($_FILES['foto'])){
+				date_default_timezone_set("Brazil/East"); //Definindo timezone padrão
+
+				$ext = ltrim( substr(  $_FILES['foto']['name'], strrpos(  $_FILES['foto']['name'], '.' ) ), '.' ); //Pegando extensão do arquivo
+				$new_name = md5(date("Y.m.d-H.i.s")) . "." . $ext; //Definindo um novo nome para o arquivo
+				$dir = 'fotos/'; //Diretório para uploads
+
+		   
+				$sql4 = "UPDATE membros SET membros.foto='$new_name', membros.nome='$nome', membros.sobrenome='$sobrenome', membros.matricula='$matricula', membros.link='$link', membros.descricao='$descricao' WHERE membros.id = '$id'";
+			if($mysqli->query($sql4) AND move_uploaded_file($_FILES['foto']['tmp_name'], $dir.$new_name)){
+				echo("<script type='text/javascript'> alert('Atualizado com sucesso!'); location.href='cadastroIntegrante.php';</script>");
+			}else{
+				echo("<script type='text/javascript'> alert('Houve um erro! tente novamente'); location.href='cadastroIntegrante.php';</script>");
+			}
+		}
+		}else{
+			$sql4 = "UPDATE membros SET membros.nome='$nome', membros.sobrenome='$sobrenome', membros.matricula='$matricula', membros.link='$link', membros.descricao='$descricao' WHERE membros.id = '$id'";
+			if($mysqli->query($sql4)){
+				echo("<script type='text/javascript'> alert('Atualizado com sucesso!'); location.href='cadastroIntegrante.php';</script>");
+			}else{
+				echo("<script type='text/javascript'> alert('Houve um erro! tente novamente'); location.href='cadastroIntegrante.php';</script>");
+			}
+		}
+	
 	}
 ?>

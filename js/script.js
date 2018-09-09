@@ -93,6 +93,47 @@ function cadastarTipoPeca(){
 		}
 	});
 }
+$("#foto").on('change', function () {
+ 
+    if (typeof (FileReader) != "undefined") {
+ 
+        var image_holder = $("#image-holder");
+        image_holder.empty();
+ 
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            $("<img />", {
+                "src": e.target.result,
+                "class": "thumb-image",
+                "width": "100"
+            }).appendTo(image_holder);
+        }
+        image_holder.show();
+        reader.readAsDataURL($(this)[0].files[0]);
+    } else{
+        alert("Este navegador nao suporta FileReader.");
+    }
+});
+
+function carregarFoto(a) {
+ 
+    if (typeof (FileReader) != "undefined") {
+ 
+        var image_holder = $("#image-holder");
+        image_holder.empty();
+ 
+        var reader = new FileReader();
+            $("<img />", {
+                "src": "fotos/"+a,
+                "class": "thumb-image",
+                "width": "100"
+            }).appendTo(image_holder);
+        image_holder.show();
+        reader.readAsDataURL($(this)[0].files[0]);
+    } else{
+        alert("Este navegador nao suporta FileReader.");
+    }
+}
 aux = 0;
 function atualizarTipoPeca(){
 	var tipoPeca = $("#nomePeca").val();
@@ -115,18 +156,25 @@ function atualizarTipoPeca(){
 		}
 	});
 }
-function limparTipoPeca(){$("#tipoPeca").val("");var $modal = $(".result").empty().html('');}
-function buscarTipoPeca(){
-	var tipoPecaB = $("#tipoPeca").val();
+function limparIntegrante(){$("#nomeI").val("");$("#sobrenomeI").val("");$("#matriculaI").val("");$("#linkI").val("");var $modal = $(".result").empty().html('');}
+function BuscarIntegrante(){
+	if($("#nomeI").val() != "" || $("#sobrenomeI").val() != "" || $("#matriculaI").val() != "" || $("#linkI").val() != ""){
+	var nomeI = $("#nomeI").val();
+	var sobrenomeI = $("#sobrenomeI").val();
+	var matriculaI = $("#matriculaI").val();
+	var linkI = $("#linkI").val();
 	$.ajax({
 		url:'busca.php',
 		type:'post',
-		data: {tipoPecaB : tipoPecaB},
+		data: {nomeI : nomeI, sobrenomeI : sobrenomeI, matriculaI : matriculaI, linkI : linkI},
 		success: function (data){
 			var $modal = $(".result").empty().html('');
 			$modal.append(data);
 		}
 	});
+	}else{
+		alert("Informe algum dado para a pesquisa!");
+	}
 }
 function excluirPeca(){
 	$.ajax({
@@ -261,3 +309,40 @@ $(document).ready(function(){
    });
 });
 
+function carregarIntegrante(a){
+	$.ajax({
+            url:'busca.php',
+            type:'post',
+            data: {idI : a},
+            success: function (data){
+				result = data.split(';');
+				$('#idIntegrante').val(a);
+				$('#nome').val(result[0]);
+				$('#nome').focus();
+				$('#sobrenome').val(result[1]);
+				$('#sobrenome').focus();
+				$('#matricula').val(result[2]);
+				$('#matricula').focus();
+				$('#link').val(result[3]);
+				$('#link').focus();
+				$('#textarea2').val(result[4]);
+				$('#textarea2').focus();
+				$('#nomeFoto').val(result[5]);
+				$('#op').empty().html("");
+				$('#op').append("<br><button class='btn waves-effect red left col l4 m4 s12' onclick='deletarIntegrante();' type='button' name='delete'>Deletar<i class='material-icons left'>delete</i></button><button class='btn waves-effect blue right col l4 m4 s12' type='submit' name='atualizar'>Atualizar<i class='material-icons right'>sync</i></button>");
+				carregarFoto(result[5]);
+			}	
+        });
+}
+function deletarIntegrante(){
+	var id = $('#idIntegrante').val();
+	$.ajax({
+            url:'cadastrar.php',
+            type:'post',
+            data: {idEx : id},
+            success: function (data){
+				alert('Deletado com sucesso!');
+				history.go(0);
+			}	
+        });
+}

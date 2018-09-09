@@ -2632,6 +2632,24 @@ a {
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
 }
+ .shadow-text-0{
+	 text-shadow: 0px 0px 20px rgba(0,0,0,0.0) !important;
+ }
+ .shadow-text-1{
+	 text-shadow: 0px 0px 20px rgba(0,0,0,0.2) !important;
+ }
+ .shadow-text-2{
+	 text-shadow: 0px 0px 20px rgba(0,0,0,0.4) !important;
+ }
+ .shadow-text-3{
+	 text-shadow: 0px 0px 20px rgba(0,0,0,0.6) !important;
+ }
+ .shadow-text-4{
+	 text-shadow: 0px 0px 20px rgba(0,0,0,0.8) !important;
+ }
+ .shadow-text-5{
+	 text-shadow: 0px 0px 10px rgba(0,0,0,1) !important;
+ }
 
 /* 2dp elevation modified*/
 .z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-small, .btn-floating, .dropdown-content, .collapsible, .sidenav {
