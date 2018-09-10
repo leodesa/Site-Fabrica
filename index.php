@@ -19,7 +19,7 @@
         <br><br>
         <h1 class="header center blue-text text-lighten-2">Fábrica de Software</h1>
         <div class="row center">
-          <h5 class="header col s12 light black-text">Criando sistemas para Facilitar</h5>
+          <h4 class="promo-caption">Criando sistemas para Facilitar</h4>
         </div>
         <div class="row center">
           <a href="#" class="btn-large waves-light blue">Contratar</a>
@@ -73,7 +73,7 @@
       <div class="container">
         <div class="row center">
         	<br><br><br><br><br><br><br><br><br>
-          <h5 class="header col s12 light black-text">Criando sistemas para Ajudar</h5>
+          <h4 class="promo-caption white-text shadow-text-5">Criando sistemas para Ajudar</h4>
         </div>
       </div>
     </div>
@@ -100,7 +100,7 @@
       <div class="container">
         <div class="row center">
         	<br><br><br><br><br><br><br><br><br>
-          <h5 class="header col s12 light white-text">Criando sistemas para Evoluir</h5>
+          <h4 class="promo-caption white-text shadow-text-5">Criando sistemas para Evoluir</h4>
         </div>
       </div>
     </div>

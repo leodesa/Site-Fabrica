@@ -15,7 +15,7 @@
       <ul class="right hide-on-med-and-down hide-on-med-only">
 	  <li><a href="index.php">Inicio</a></li>
         <li><a href="softwares.php">Softwares</a></li>
-        <li><a href="#">Contato</a></li>
+        <li><a href="contato.php">Contato</a></li>
         <li><a href="envolvidos.php">Envolvidos</a></li>
         <li><a href="login.php">Login</a></li>
       </ul>
@@ -33,7 +33,7 @@
           <li style="outline: none;">
 		  <li><a href="index.php">Inicio</a></li>
         <li><a href="softwares.php">Softwares</a></li>
-        <li><a href="#">Contato</a></li>
+        <li><a href="contato.php">Contato</a></li>
         <li><a href="envolvidos.php">Envolvidos</a></li>
         <li><a href="login.php">Login</a></li>
     </ul>
