@@ -9,13 +9,17 @@
 <ul id="dropdown1" class="dropdown-content">
   <li><a href="cadastroIntegrante.php" class="blue-text">Integrantes</a></li>
 </ul>
+<ul id="dropdown2" class="dropdown-content">
+  <li><a href="config.php" class="blue-text">Configurações</a></li>
+</ul>
 <nav class="blue" role="navigation">
     <div class="nav-wrapper">
-	<a href="index.php"><img id="logo" src="img/logo.png" width="75"></a>
-	<a href="index.php" class="brand-logo hide-on-med-and-down">Fábrica de Software</a>
+	<img src="img/logo.png" width="75" class="hide-on-med-and-down">
+	<a href="cadastro.php" class="brand-logo show-on-small-only">Fábrica de Software</a>
       <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="fas fa-bars fa-lg"></i></a>
       <ul class="right hide-on-med-and-down hide-on-med-only">
-         <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+         <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><i class="material-icons prefix left">note_add</i>Cadastro<i class="material-icons right">arrow_drop_down</i></a></li>
+         <li><a class="dropdown-trigger" href="#!" data-target="dropdown2"><i class="material-icons prefix left">account_box</i>Conta<i class="material-icons right">arrow_drop_down</i></a></li>
         <li><a href="logout.php">Sair<i class="material-icons right">exit_to_app</i></a></li>
       </ul>
     </div>
@@ -29,7 +33,7 @@
       <li class="no-padding">
         <ul class="collapsible collapsible-accordion" style="outline: none;">
           <li style="outline: none;">
-            <a class="collapsible-header" style="outline: none;" id="arrow">Cadastro<i class="material-icons right">arrow_drop_down</i></a>
+            <a class="collapsible-header" style="outline: none;" id="arrow"><i class="material-icons prefix left">note_add</i>Cadastro<i class="material-icons right">arrow_drop_down</i></a>
             <div class="collapsible-body">
               <ul>
                 <li><a href="cadastroIntegrante.php" class="blue-text">Integrantes</a></li>
@@ -38,6 +42,17 @@
           </li>
         </ul>
       </li>
+	  <li class="no-padding">
+        <ul class="collapsible collapsible-accordion" style="outline: none;">
+          <li style="outline: none;">
+            <a class="collapsible-header" style="outline: none;" id="arrow"><i class="material-icons prefix left">account_box</i>Conta<i class="material-icons right">arrow_drop_down</i></a>
+            <div class="collapsible-body">
+              <ul>
+                <li><a href="config.php" class="blue-text">Configurações</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
       </li>
-      <li><a href="logout.php">Sair<i class="material-icons right">exit_to_app</i></a></li>
+      <li><a href="logout.php">Sair<i class="material-icons left">exit_to_app</i></a></li>
     </ul>

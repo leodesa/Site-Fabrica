@@ -334,6 +334,45 @@ function carregarIntegrante(a){
 			}	
         });
 }
+function SenhaUser(){
+	var senhas = $('#senha').val();
+	var senhar = $('#senhar').val();
+	var senhaAt = $('#senhaAt').val();
+	if(senhas==senhar){
+		$.ajax({
+			url:'cadastrar.php',
+			type:'post',
+			data: {senhas : senhas, senhar: senhar, senhaAt : senhaAt},
+			success: function (data){
+				$('#senhaAt').val("");
+				$('#senhar').val("");
+				$('#senha').val("");
+				alert(data);
+			}	
+		});
+	}else{
+		alert("As senhas são diferentes!");
+		$('#senhaAt').val("");
+		$('#senhar').val("");
+		$('#senha').val("");
+		$('#senha').focus();
+	}
+}
+function NomeUser(){
+	var new_user = $('#new_user').val();
+	var senhaUser = $('#senhaUser').val();
+	$.ajax({
+            url:'cadastrar.php',
+            type:'post',
+            data: {new_user : new_user, senhaUser: senhaUser},
+            success: function (data){
+				$('#new_user').val("");
+				$('#new_user').focus();
+				$('#senhaUser').val("");
+				alert(data);
+			}	
+        });
+}
 function deletarIntegrante(){
 	var id = $('#idIntegrante').val();
 	$.ajax({
