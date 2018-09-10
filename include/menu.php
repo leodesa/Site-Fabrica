@@ -6,11 +6,12 @@
       }
     </style>
 </head>
-<nav class="blue">
+<nav class="blue" role="navigation">
     <div class="nav-wrapper">
-	<a href="index.php"><img id="logo" src="img/logo.png" width="75"></a>
-	<a href="index.php" class="brand-logo hide-on-med-and-down">Fábrica de Software</a>
-      <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="fas fa-bars fa-lg"></i></a>
+	<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="fas fa-bars fa-lg"></i></a>
+	<div class="container">
+	<img src="img/logo.png" width="75" class="hide-on-med-only hide-on-small-only">
+	<a href="cadastro.php" class="brand-logo show-on-small-and-up">Fábrica de Software</a>
       <ul class="right hide-on-med-and-down hide-on-med-only">
 	  <li><a href="index.php">Inicio</a></li>
         <li><a href="softwares.php">Softwares</a></li>
@@ -18,6 +19,7 @@
         <li><a href="envolvidos.php">Envolvidos</a></li>
         <li><a href="login.php">Login</a></li>
       </ul>
+    </div>
     </div>
   </nav>
 

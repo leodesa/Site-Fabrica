@@ -14,14 +14,17 @@
 </ul>
 <nav class="blue" role="navigation">
     <div class="nav-wrapper">
-	<img src="img/logo.png" width="75" class="hide-on-med-and-down">
-	<a href="cadastro.php" class="brand-logo show-on-small-only">Fábrica de Software</a>
-      <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="fas fa-bars fa-lg"></i></a>
+	<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="fas fa-bars fa-lg"></i></a>
+	<div class="container">
+	<img src="img/logo.png" width="75" class="hide-on-med-only hide-on-small-only">
+	<a href="cadastro.php" class="brand-logo show-on-small-and-up">Fábrica de Software</a>
+	
       <ul class="right hide-on-med-and-down hide-on-med-only">
          <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><i class="material-icons prefix left">note_add</i>Cadastro<i class="material-icons right">arrow_drop_down</i></a></li>
          <li><a class="dropdown-trigger" href="#!" data-target="dropdown2"><i class="material-icons prefix left">account_box</i>Conta<i class="material-icons right">arrow_drop_down</i></a></li>
         <li><a href="logout.php">Sair<i class="material-icons right">exit_to_app</i></a></li>
       </ul>
+    </div>
     </div>
   </nav>
 

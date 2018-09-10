@@ -6,9 +6,8 @@
   <title>Fábrica de Software</title>
 
   <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link rel="icon" href="img/logo.png">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
